@@ -1,7 +1,7 @@
 "use client";
 import axios from 'axios';
 import React, { useState } from 'react';
-import DataIcon from '../../components/dataIcon';
+import DataIcon from '../../components/DataIcon/DataIcon';
 import Header from '../../components/Header/Header';
 import SearchForm from '../../components/SearchForm/SearchForm';
 

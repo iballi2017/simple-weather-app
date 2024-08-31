@@ -3,8 +3,6 @@ import { fireEvent, render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import SearchForm from '../SearchForm';
 
-// handleSearch, city, handleInputChange
-
 const mockSetCity = jest.fn();
 
 describe('SearchForm', () => {
