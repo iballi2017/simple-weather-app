@@ -17,7 +17,7 @@ const Weather = () => {
             const response = await axios.get(
                 `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${process.env.NEXT_PUBLIC_OPENWEATHERMAP_API_KEY}&units=metric`
             );
-            console.log("response: ", response);
+            // console.log("response: ", response);
             setWeather(response.data);
         } catch (err) {
             setError('City not found or API error.');
@@ -54,7 +54,7 @@ const Weather = () => {
             {loading && <p>Loading...</p>}
             {error && <p className='text-red-400 text-sm'>{error}</p>}
             {weather && (
-                <div className='mt-8 mb-4 flex flex-col gap-2'>
+                <div className='mt-8 mb-4 flex flex-col gap-2' data-testId="details-card">
                     <h2 className='font-semibold text-3xl'>{weather.name}, {weather.sys.country}.</h2>
                     <p className='text-xs text-gray-400'>{convert_date(weather.dt)}</p>
                     <div className='flex items-center'>

@@ -13,11 +13,10 @@ describe('Weather', () => {
         expect(true).toBe(true)
     });
 
-    test('should render City weather condition', () => {
+    test('should render City weather condition', async () => {
         render(<Weather />);
-        // const textElement = screen.getByText(/weather app/i);
-        // expect(textElement).toBeInTheDocument();
-        screen.debug();
-        expect(true).toBe(true)
+        const detailsCArdElement = await screen.findByTestId(/details-card/i);
+        // screen.debug();
+        expect(detailsCArdElement).toBeInTheDocument();
     });
 });
