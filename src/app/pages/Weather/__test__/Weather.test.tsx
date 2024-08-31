@@ -15,7 +15,7 @@ describe('Weather', () => {
 
     test('should render City weather condition', async () => {
         render(<Weather />);
-        const detailsCArdElement = await screen.findByTestId(/details-card/i);
+        const detailsCArdElement = await screen.findByTestId('details-card');
         // screen.debug();
         expect(detailsCArdElement).toBeInTheDocument();
     });
